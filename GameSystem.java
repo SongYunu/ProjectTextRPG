@@ -57,19 +57,26 @@ class GameStart {
 }
 
 class GameOver {
+	static Scanner in = new Scanner(System.in);
+
 	public static void dead(String reason) {
 		System.out.println("\n****[ 게임 오버 ]****");
 		switch (reason) {
 		case "defeat":
 			System.out.println("전투에서 패배하여 쓰러졌습니다...");
+			Status.coin = 0;
+			Inventory.slots.clear();
+			System.out.println("모든 것을 잃고 마을에서 부활합니다.");
+			Status.hp = Status.maxHp;
+			User.showMenu();
 			break;
 		case "happyhappyhappy":
 			System.out.println(Status.name + "은(는) 이곳이 게임 세상인 걸 인지해버렸습니다.");
+			System.exit(0);
 			break;
 		default:
 			System.out.println("알 수 없는 이유로 게임이 종료되었습니다.");
-		}
 
-		System.exit(0);
+		}
 	}
 }
