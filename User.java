@@ -66,8 +66,8 @@ class Status {
 		System.out.println("***************************\n");
 		System.out.println(Status.name + "님의 모험을 함께하고 있습니다.");
 		System.out.println("Level : " + Status.lev);
-		System.out.println("Power : " + Status.power);
-		System.out.println("Defense : " + Status.defense);
+		System.out.println("Power : " + Status. getTotalPower());
+		System.out.println("Defense : " + Status.getTotalDefense());
 		System.out.println("HP : " + Status.hp);
 		System.out.println("MP : " + Status.mp);
 		System.out.println("Exp : " + Status.exp);
