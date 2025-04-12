@@ -36,6 +36,7 @@ public class Battle {
 	}
 
 	public static void start(Monster monster) {
+		ItemUse3.PassiveItem();
 		System.out.println("\n " + monster.name + "이(가) 길을 막아섰습니다.");
 		monster.MonsterStatus();
 
