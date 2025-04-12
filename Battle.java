@@ -51,7 +51,7 @@ public class Battle {
 			while (continueBattle) {
 				switch (choice) {
 				case 1:
-					monster.takeDamage(Status.power);
+					monster.takeDamage(Status.getTotalPower());
 					if (monster.MonsterAlive()) {
 						monsterAttack(monster);
 					} else {
@@ -96,7 +96,7 @@ public class Battle {
 			return;
 		}
 
-		int dmg = monster.power - Status.defense;
+		int dmg = monster.power - Status.getTotalDefense();
 		if (dmg < 0)
 			dmg = 0;
 		Status.hp -= dmg;
